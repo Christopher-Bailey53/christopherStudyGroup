@@ -21,5 +21,7 @@ namespace christopherStudyGroup.Models
         [Display(Name = "EMAIL ADRESS")]
         public string EmailAddress { get; set; }
 
+        [Display(Name = "Link to personal page")]
+        public string myLink { get; set; }
     }
 }
