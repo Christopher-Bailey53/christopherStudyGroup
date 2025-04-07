@@ -3,11 +3,12 @@
 @{
     ViewBag.Title = "ListPeople";
 }
+
 <link href="@Url.Content("~/Content/NewStyle.css")" rel="stylesheet" type="text/css" />
 <h2>Study Group</h2>
 
 
-<table class="table">
+<table class="table" id="table">
     <tr id="headerStyle">
         <th>
             @Html.DisplayNameFor(model => model.StudentNumber)
@@ -23,6 +24,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.myLink)
+        </th>
+        <th>
+            Delete
         </th>
     </tr>
 
@@ -46,10 +50,19 @@
                     <button type="button" class="buttonStyle">Link</button>
                 </a>
             </td>
+            <td>
+                <button type="button" class="buttonStyle" onclick="deleteRow(this)">Delete</button>
+            </td>
         </tr>
     }
 </table>
 
+<script src="@Url.Content("~/Scripts/MyScript.js")"></script>
+<script>
+    window.onload = function () {
+        changeTextColor();
+    };
+</script>
 
 
 
