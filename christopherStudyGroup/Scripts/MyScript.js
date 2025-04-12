@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const rows = document.querySelectorAll("#table tr");
 
         rows.forEach((row, index) => {
-            
+
             if (index === 0) return;
 
             const nameCell = row.querySelector(".fName");
@@ -51,46 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-
-    // === TAB FUNCTIONALITY ===
-    const tabButtons = document.querySelectorAll('.tab-button');
-    const tabContents = document.querySelectorAll('.tab-content');
-
-    // Function to handle tab switching
-    function switchTab(target) {
-        // Hide all tab content
-        tabContents.forEach(content => content.classList.remove('active'));
-
-        // Remove the 'active' class from all buttons
-        tabButtons.forEach(button => button.classList.remove('active'));
-
-        // Show the content that corresponds to the clicked tab
-        const targetContent = document.querySelector(target);
-        if (targetContent) {
-            targetContent.classList.add('active');  // Show the content
-        }
-
-        // Add 'active' class to the clicked tab button
-        const activeButton = document.querySelector(`[data-target="${target}"]`);
-        if (activeButton) {
-            activeButton.classList.add('active');  // Highlight the active tab
-        }
-    }
-
-    // Add event listeners to each tab button
-    tabButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            // Get the target content ID from the button's data-target attribute
-            const target = button.getAttribute('data-target');
-            switchTab(target);
-        });
-    });
-
-    // Set the default tab (first one) if there are any tab buttons
-    if (tabButtons.length > 0) {
-        tabButtons[0].click(); // Automatically trigger the first tab
-    }
-
 });
 
 function saveTable() {
@@ -161,10 +121,3 @@ function deleteRow(button) {
     const row = button.closest("tr");
     row.remove();
 }
-
-
-document.addEventListener("DOMContentLoaded", function () {
-
-   
-
-});
