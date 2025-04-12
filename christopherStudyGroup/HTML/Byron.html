@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>Person 3 - Byron Kurk</title>
     <link href="/Content/NewStyle.css" rel="stylesheet" type="text/css" />
-    <script dfer src="/Content/Script.js"></script>
+    <script defer src="/Content/Script.js"></script>
 </head>
 <body>
 
@@ -22,69 +22,44 @@
         </ul>
     </nav>
 
-    <div class="content">
+    <div class="tabs">
+        <button type="button" class="tab-button" data-target="#tab1">Biography and Background</button>
+        <button type="button" class="tab-button" data-target="#tab2">Hobbies</button>
+        <button type="button" class="tab-button" data-target="#tab3">Modules</button>
+    </div>
 
-        <section class="bioSection">
+    <div class="tabs-content">
 
+        <div class="tab-content" id="tab1">
             <img src="Images/IT.jpg" alt="IT" class="bioPicture" />
-
             <div class="bioContent">
                 <h2>Biography and Background</h2>
-
                 <p>
-                    Byron is from Ruimsig and he is currently studying BIT Information Systems at the University of Pretoria. He chose this degree as
-                    he enjoys creating systems.
+                    Byron is from Ruimsig and he is currently studying 
+                    BIT Information Systems at the University of Pretoria.
                 </p>
-
             </div>
+        </div>
 
-        </section>
-
-
-        <section class="hobbySection">
-
-            <div class="hobbyContent">
-
-                <h2>Hobbies</h2>
-                <p>
-                    Byrons's favourite hobbies include wood working as well as going to the gym. He
-                    also enjoys having a braai.
-                </p>
-
-            </div>
-
+        <div class="tab-content" id="tab2">
+            <h2>Hobbies</h2>
+            <p>Byron's favourite hobbies include woodworking, gym, and having a braai.</p>
             <img src="Images/Wood.jpg" alt="Wood Working" class="hobbyPicture" />
+        </div>
 
-        </section>
-
-        <section>
-
+        <div class="tab-content" id="tab3">
             <h2>Modules</h2>
-
             <table>
                 <tr>
                     <th>Modules Semester 1</th>
                     <th>Modules Semester 2</th>
                 </tr>
-                <tr>
-                    <td>FIL 251</td>
-                    <td>INF 225</td>
-                </tr>
-                <tr>
-                    <td>INF 214</td>
-                    <td>INF 261</td>
-                </tr>
-                <tr>
-                    <td>OBS 211</td>
-                    <td>OBS 212</td>
-                </tr>
-                <tr>
-                    <td>OBS 214</td>
-                    <td>KOB 283</td>
-                </tr>
+                <tr><td>FIL 251</td><td>INF 225</td></tr>
+                <tr><td>INF 214</td><td>INF 261</td></tr>
+                <tr><td>OBS 211</td><td>OBS 212</td></tr>
+                <tr><td>OBS 214</td><td>KOB 283</td></tr>
             </table>
-
-        </section>
+        </div>
     </div>
 
 </body>

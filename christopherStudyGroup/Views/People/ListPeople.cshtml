@@ -7,6 +7,13 @@
 <link href="@Url.Content("~/Content/NewStyle.css")" rel="stylesheet" type="text/css" />
 <h2>Study Group</h2>
 
+@Html.ActionLink("Create New", "Create")
+
+<p>
+    <label>Search String</label>
+    <input type="text" id="string" />
+    <button type="submit" class="btn btn-success" id="subBtn">Submit</button>
+</p>
 
 <table class="table" id="table">
     <tr id="headerStyle">
@@ -23,9 +30,6 @@
             @Html.DisplayNameFor(model => model.EmailAddress)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.myLink)
-        </th>
-        <th>
             Delete
         </th>
     </tr>
@@ -36,7 +40,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.StudentNumber)
             </td>
-            <td>
+            <td class="fName">
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
@@ -46,18 +50,19 @@
                 @Html.DisplayFor(modelItem => item.EmailAddress)
             </td>
             <td>
-                <a href="@Url.Content(item.myLink)">
-                    <button type="button" class="buttonStyle">Link</button>
-                </a>
-            </td>
-            <td>
                 <button type="button" class="buttonStyle" onclick="deleteRow(this)">Delete</button>
             </td>
         </tr>
     }
 </table>
 
+<p>
+    <button class="btn btn-success" onclick="saveTable()">Save to Local Storage</button>
+    <button class="btn btn-success" onclick="loadTable()">Retrieve from Local Storage</button>
+    <button class="btn btn-success" onclick="clearTableStorage()">Clear Local Storage</button>
+</p>
 <script src="@Url.Content("~/Scripts/MyScript.js")"></script>
+
 <script>
     window.onload = function () {
         changeTextColor();
